@@ -11,6 +11,9 @@ public class LaunchApp {
 		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationCOntext.xml");
 		
 		Voter voter = context.getBean(Voter.class);
+		voter.eligibleToVote();
+//		System.out.println(voter.getAge());
+		context.close();
 		
 		
 
